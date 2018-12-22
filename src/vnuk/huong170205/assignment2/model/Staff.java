@@ -2,9 +2,9 @@ package vnuk.huong170205.assignment2.model;
 
 import java.util.Scanner;
 
+import vnuk.huong170205.assignment2.controller.Controller;
 import vnuk.huong170205.assignment2.controller.Observer;
 import vnuk.huong170205.assignment2.define.Define;
-import vnuk.huong170205.assignment2.view.Menu;
 
 public class Staff extends Person implements Observer{
 	private String homeTown;
@@ -125,7 +125,7 @@ public class Staff extends Person implements Observer{
 				+ "2: Debuty.\n"
 				+ "3: Employee.\n");
 		
-		int selection = Menu.inputChoice(1, 3);
+		int selection = Controller.inputChoice(1, 3);
 		
 		switch (selection) {
 			case Define.TYPE_OF_CHIEF : {
@@ -216,8 +216,22 @@ public class Staff extends Person implements Observer{
 			return this;
 		}
 
-		public StaffBuilder setAllowance(int allowance) {
-			this.allowance = allowance;
+		public StaffBuilder setAllowance(String position) {
+			switch(position) {
+				case Define.POSITION_OF_CHIEF: {
+					this.allowance = Define.ALLOWANCE_OF_CHIEF;
+					break;
+				}
+				case Define.POSITION_OF_DEBUTY: {
+					this.allowance = Define.ALLOWANCE_OF_DEBUTY;
+					break;
+				}
+				case Define.POSITION_OF_EMPLOYEE: {
+					this.allowance = Define.ALLOWANCE_OF_EMPLOYEE;
+					break;
+				}
+			}
+
 			return this;
 		}
 

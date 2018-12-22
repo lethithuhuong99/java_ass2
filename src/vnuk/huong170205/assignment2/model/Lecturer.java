@@ -3,9 +3,9 @@ package vnuk.huong170205.assignment2.model;
 
 import java.util.Scanner;
 
+import vnuk.huong170205.assignment2.controller.Controller;
 import vnuk.huong170205.assignment2.controller.Observer;
 import vnuk.huong170205.assignment2.define.Define;
-import vnuk.huong170205.assignment2.view.Menu;
 
 public class Lecturer extends Person implements Observer {
 	private String homeTown;
@@ -124,7 +124,7 @@ public class Lecturer extends Person implements Observer {
 				+ "2: Master.\n"
 				+ "3: Doctor.\n");
 		
-		int selection = Menu.inputChoice(1, 3);
+		int selection = Controller.inputChoice(1, 3);
 		
 		switch (selection) {
 		case Define.TYPE_OF_BACHELOR : {
@@ -207,8 +207,22 @@ public class Lecturer extends Person implements Observer {
 			return this;
 		}
 
-		public LecturerBuilder setAllowance(int allowance) {
-			this.allowance = allowance;
+		public LecturerBuilder setAllowance(String quatification) {
+			switch(qualification) {
+			case Define.QUALIFICATION_OF_BACHELOR: {
+				this.allowance = Define.ALLOWANCE_OF_BACHELOR;
+				break;
+			}
+			case Define.QUALIFICATION_OF_DOCTOR: {
+				this.allowance = Define.ALLOWANCE_OF_DOCTOR;
+				break;
+			}
+			case Define.QUALIFUCATION_OF_MASTER: {
+				this.allowance = Define.ALLOWANCE_OF_MASTER;
+				break;
+			}
+		}
+
 			return this;
 		}
 
