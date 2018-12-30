@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 import vnuk.huong170205.assignment2.define.Define;
@@ -348,7 +349,12 @@ public class Controller {
 				case 3: {
 					ArrayList <Person> persons = new ArrayList <>();
 					persons = (ArrayList<Person>) Define.persons.clone();
-			        Collections.sort(persons, Person.namePerson);
+			        Collections.sort(persons, new Comparator<Person>() {
+			        	@Override
+			            public int compare(Person person1, Person person2) {
+			                return (int) (person1.getName().compareTo(person2.getName()));
+			            }
+			        });
 			        showListPerson(persons);
 					break;
 				}

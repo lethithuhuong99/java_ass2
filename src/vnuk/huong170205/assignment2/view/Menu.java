@@ -1,7 +1,5 @@
 package vnuk.huong170205.assignment2.view;
 
-import vnuk.huong170205.assignment2.controller.Controller;
-
 public class Menu {
 	
 	public static void mainMenu() {
@@ -30,11 +28,11 @@ public class Menu {
 	
 	public static void menu4() {
 
-			System.out.println("4.1 Display current list: \n"
+			System.out.println("4.1 Display current list \n"
 							+ "4.2 Display list order by Ascending of salary \n"
 							+ "4.3 Display list with name order by Alphabet \n"
-							+ "4.4 Find staff by name \n"
-							+ "4.5 Find staff by year of birth \n"
+							+ "4.4 Find employee by name \n"
+							+ "4.5 Find employee by year of birth \n"
 							+ "4.6 Return \n");
 	}
 

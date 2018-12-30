@@ -1,7 +1,5 @@
 package vnuk.huong170205.assignment2.model;
 
-import java.util.Comparator;
-
 public abstract class Person {
 	protected int id;
 	protected String name; 
@@ -55,11 +53,4 @@ public abstract class Person {
 	
 	public abstract float getSalary();
 	
-	public static Comparator<Person> namePerson = new Comparator<Person>() {
-        @Override
-        public int compare(Person person1, Person person2) {
-            return (int) (person1.getName().compareTo(person2.getName()));
-        }
-	};
-   
 }
