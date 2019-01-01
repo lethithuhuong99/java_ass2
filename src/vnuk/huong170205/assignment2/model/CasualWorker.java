@@ -6,6 +6,8 @@ public class CasualWorker extends Person {
 	private int workDays;
 	private int priceOfWorkDay;
 	private boolean isCreated;
+	
+	public CasualWorker( ) {}
 
 	public int getWorkDays() {
 		return workDays;

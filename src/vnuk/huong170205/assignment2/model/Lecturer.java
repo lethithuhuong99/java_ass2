@@ -19,6 +19,7 @@ public class Lecturer extends Person implements Observer {
 	private boolean isCreated;
 	
 	public Lecturer() {}
+	
 	public String getHomeTown() {
 		return homeTown;
 	}
@@ -63,7 +64,7 @@ public class Lecturer extends Person implements Observer {
 		return salaryRatio;
 	}
 	
-	public void setSalaryRatio(int salaryRatio) {
+	public void setSalaryRatio(float salaryRatio) {
 		this.salaryRatio = salaryRatio;
 	}
 	
@@ -77,10 +78,6 @@ public class Lecturer extends Person implements Observer {
 
 	public float getBasicSalary() {
 		return basicSalary;
-	}
-
-	public void setBasicSalary(float basicSalary) {
-		this.basicSalary = basicSalary;
 	}
 		
 	@Override
@@ -133,7 +130,7 @@ public class Lecturer extends Person implements Observer {
 			break;
 		}
 		case Define.TYPE_OF_MASTER: {
-			this.qualification = Define.QUALIFUCATION_OF_MASTER;
+			this.qualification = Define.QUALIFICATION_OF_MASTER;
 			this.allowance = Define.ALLOWANCE_OF_MASTER;
 			break;
 		}
@@ -217,7 +214,7 @@ public class Lecturer extends Person implements Observer {
 				this.allowance = Define.ALLOWANCE_OF_DOCTOR;
 				break;
 			}
-			case Define.QUALIFUCATION_OF_MASTER: {
+			case Define.QUALIFICATION_OF_MASTER: {
 				this.allowance = Define.ALLOWANCE_OF_MASTER;
 				break;
 			}
@@ -231,7 +228,7 @@ public class Lecturer extends Person implements Observer {
 			return this;
 		}
 
-		public LecturerBuilder setSalaryRatio(Float salaryRatio) {
+		public LecturerBuilder setSalaryRatio(float salaryRatio) {
 			this.salaryRatio = salaryRatio;
 			return this;
 		}

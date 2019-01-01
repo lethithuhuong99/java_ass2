@@ -47,7 +47,7 @@ public class Staff extends Person implements Observer{
 		return salaryRatio;
 	}
 	
-	public void setSalaryRatio(int salaryRatio) {
+	public void setSalaryRatio(float salaryRatio) {
 		this.salaryRatio = salaryRatio;
 	}
 	
@@ -71,17 +71,13 @@ public class Staff extends Person implements Observer{
 		return yearsOfWork;
 	}
 	
-	public void setYearsOfWorl(int yearsOfWork) {
+	public void setYearsOfWork(int yearsOfWork) {
 		this.yearsOfWork = yearsOfWork;
 	}
 	
 	
 	public float getBasicSalary() {
 		return basicSalary;
-	}
-	
-	public void setBasicSalary(float basicSalary) {
-		this.basicSalary = basicSalary;
 	}
 
 	

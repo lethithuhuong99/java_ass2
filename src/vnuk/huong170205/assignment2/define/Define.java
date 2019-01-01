@@ -29,7 +29,7 @@ public class Define {
 	public static final String POSITION_OF_DEBUTY = "Debuty";
 	public static final String POSITION_OF_EMPLOYEE = "Employee";
 	public static final String QUALIFICATION_OF_BACHELOR = "Bachelor";
-	public static final String QUALIFUCATION_OF_MASTER = "Master";
+	public static final String QUALIFICATION_OF_MASTER = "Master";
 	public static final String QUALIFICATION_OF_DOCTOR = "Doctor";
 	
 	public static final float DEFAULT_BASIC_SALARY = 730;

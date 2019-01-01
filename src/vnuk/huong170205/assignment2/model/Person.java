@@ -7,22 +7,11 @@ public abstract class Person {
 	protected int type;
 	
 	public Person() {}
-	public Person(int id) {
-		this.id = id;
-	}
-	public Person (int type,int id) {
-		this.type = type;
-		this.id = id;		
-	}
-	
+
 	public abstract void input();
 
 	public int getId() {
 		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getName() {
@@ -43,10 +32,6 @@ public abstract class Person {
 
 	public int getType() {
 		return type;
-	}
-
-	public void setType(int type) {
-		this.type = type;
 	}
 
 	public abstract String toString();
