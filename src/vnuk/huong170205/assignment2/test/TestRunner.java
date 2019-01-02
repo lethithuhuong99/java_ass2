@@ -1,10 +1,10 @@
-package test;
-
-import test.TestSuite;
+package vnuk.huong170205.assignment2.test;
 
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
+
+import vnuk.huong170205.assignment2.test.TestSuite;
 
 public class TestRunner {
 

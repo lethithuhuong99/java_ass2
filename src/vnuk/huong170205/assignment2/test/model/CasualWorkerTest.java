@@ -1,7 +1,10 @@
-package vnuk.huong170205.assignment2.model.test;
+package vnuk.huong170205.assignment2.test.model;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 
 import org.junit.Before;
 import org.junit.Test;
